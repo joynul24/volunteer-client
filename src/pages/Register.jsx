@@ -54,8 +54,8 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center container px-2 md:px-0 mb-10 md:mb-20 mt-10 md:mt-20 mx-auto">
-      <div className="rounded-2xl backdrop-blur-md bg-white/10 border border-white/30 w-full shadow-lg md:w-1/2">
+    <div className="flex bg-[#FDF9F3] justify-center items-center container px-2 md:px-0 mb-10 md:mb-20 mt-10 md:mt-20 mx-auto">
+      <div className="rounded-2xl bg-white w-full md:w-1/2">
         <div className="card-body">
         <h3 className="text-xl font-bold text-center">Register With</h3>
           <button

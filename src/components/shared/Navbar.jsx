@@ -25,13 +25,13 @@ const Navbar = () => {
             src="https://joynul2024.sirv.com/volunteerHub/logo.png"
             alt=""
           />
-          <span className="font-semibold md:font-bold sm:text-base md:text-xl lg:text-2xl">
+          <span className="font-m font-semibold md:font-bold sm:text-base md:text-xl lg:text-2xl">
             Voluteer <span className="text-[#F68926]">Hub</span>
           </span>
         </Link>
       </div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu font-l menu-horizontal px-1">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -67,7 +67,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="font-l menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
                 <Link to="" className="justify-between">
