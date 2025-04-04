@@ -1,3 +1,5 @@
+import { FaArrowTrendUp } from "react-icons/fa6";
+
 const Slider = () => {
   return (
     <div className="carousel w-full">
@@ -16,7 +18,7 @@ const Slider = () => {
             tomorrow. Be a volunteer, be the change!
           </p>
           <button className="btn flex mx-auto items-center bg-[#F68926] text-white hover:text-black mt-6 font-semibold hover:bg-white">
-            Explore More
+            Explore More <FaArrowTrendUp />
           </button>
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -43,7 +45,7 @@ const Slider = () => {
             us and be a force for good!
           </p>
           <button className="btn flex mx-auto items-center bg-[#F68926] text-white hover:text-black mt-6 font-semibold hover:bg-white">
-            Explore More
+           Explore More <FaArrowTrendUp />
           </button>
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -70,7 +72,7 @@ const Slider = () => {
             us and be a force for good!
           </p>
           <button className="btn flex mx-auto items-center bg-[#F68926] text-white hover:text-black mt-6 font-semibold hover:bg-white">
-            Explore More
+            Explore More <FaArrowTrendUp />
           </button>
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

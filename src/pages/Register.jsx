@@ -60,7 +60,7 @@ const Register = () => {
         <h3 className="text-xl font-bold text-center">Register With</h3>
           <button
             onClick={handleGoogleSignIn}
-            className="btn mt-5 text-blue-500 w-full border"
+            className="border-gray-300 rounded-full btn mt-5 text-blue-500 w-full border"
           >
             <FcGoogle></FcGoogle> Google
           </button>
@@ -75,7 +75,7 @@ const Register = () => {
               name="name"
               type="text"
               placeholder="Your name"
-              className="w-full input input-bordered"
+              className="rounded-full w-full input input-bordered"
               required
             />
           </div>
@@ -87,7 +87,7 @@ const Register = () => {
               name="photoUrl"
               type="text"
               placeholder="Your photo url"
-              className="w-full input input-bordered"
+              className="rounded-full w-full input input-bordered"
               required
             />
           </div>
@@ -99,7 +99,7 @@ const Register = () => {
               name="email"
               type="email"
               placeholder="Your email"
-              className="w-full input input-bordered"
+              className="rounded-full w-full input input-bordered"
               required
             />
           </div>
@@ -111,12 +111,12 @@ const Register = () => {
               name="password"
               type="password"
               placeholder="Your password"
-              className="w-full input input-bordered"
+              className="rounded-full w-full input input-bordered"
               required
             />
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary w-full bg-[#F68926] border-0 text-black hover:bg-[#f68b26ee]">
+            <button className="btn btn-primary rounded-full w-full bg-[#F68926] border-0 text-black hover:bg-[#f68b26ee]">
               Register
             </button>
           </div>

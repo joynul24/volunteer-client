@@ -48,7 +48,7 @@ const Login = () => {
           <h3 className="text-xl font-bold text-center">Login With</h3>
           <button
             onClick={handleGoogleSignIn}
-            className="btn mt-5 text-blue-500 border"
+            className="border-gray-300 rounded-full btn mt-5 text-blue-500 border"
           >
             <FcGoogle></FcGoogle> Google
           </button>
@@ -64,7 +64,7 @@ const Login = () => {
               name="email"
               type="email"
               placeholder="Your email"
-              className="w-full input input-bordered"
+              className="rounded-full w-full input input-bordered"
               required
             />
           </div>
@@ -76,12 +76,12 @@ const Login = () => {
               name="password"
               type="password"
               placeholder="Your password"
-              className="w-full input input-bordered"
+              className="rounded-full w-full input input-bordered"
               required
             />
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary w-full bg-[#F68926] border-0 text-black hover:bg-[#f68b26ee]">
+            <button className="rounded-full btn btn-primary w-full bg-[#F68926] border-0 text-black hover:bg-[#f68b26ee]">
               Login
             </button>
           </div>

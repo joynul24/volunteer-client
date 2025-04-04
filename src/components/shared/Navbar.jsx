@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import AuthContext from "../../context/Authcontext";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navber.css";
 
 const Navbar = () => {
@@ -33,10 +33,10 @@ const Navbar = () => {
       <div className="flex-none">
         <ul className="menu font-l menu-horizontal px-1">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="allVolunteer">All Volunteer</Link>
+            <NavLink to="allVolunteer">All Volunteer</NavLink>
           </li>
 
           {!user && (
@@ -70,12 +70,12 @@ const Navbar = () => {
               className="font-l menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to="" className="justify-between">
-                  Add Voluntee
-                </Link>
+                <NavLink to="addVolunteer" className="justify-between">
+                  Add Volunteer
+                </NavLink>
               </li>
               <li>
-                <Link to="">Manage My Posts</Link>
+                <NavLink to="">Manage My Posts</NavLink>
               </li>
               <li className="mt-2">
                 <button
