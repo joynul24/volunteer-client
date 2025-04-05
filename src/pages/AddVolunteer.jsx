@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 const AddVolunteer = () => {
   const { user } = useContext(AuthContext);
-  const hangleAddVolunteer = async(e) => {
+  const hangleAddVolunteer = async (e) => {
     e.preventDefault();
     const form = e.target;
     const PostTitle = form.title.value;
@@ -31,22 +31,36 @@ const AddVolunteer = () => {
       description,
     };
 
-    // make a post request
-    try{
-      const {data} = await axios.post(`${import.meta.env.VITE_API_URL}/addVolunteer`, newVolunteer)
-    if (data.insertedId) {
-      Swal.fire({
-        title: "Post added Successfuly!",
-        icon: "success",
-        draggable: true,
-      });
-      form.reset();
-    }
-  }
-  catch{
-    toast.error("Post failed to be add")
+    if (
+      PostTitle === "" ||
+      category === "" ||
+      location === "" ||
+      deadline === "" ||
+      volunteersNeeded === "" ||
+      thumbnail === "" ||
+      description === ""
+    ) {
+      toast.error("Please Complete the full form!");
+      return;
     }
 
+    // make a post request
+    try {
+      const { data } = await axios.post(
+        `${import.meta.env.VITE_API_URL}/addVolunteer`,
+        newVolunteer
+      );
+      if (data.insertedId) {
+        Swal.fire({
+          title: "Post added Successfuly!",
+          icon: "success",
+          draggable: true,
+        });
+        form.reset();
+      }
+    } catch {
+      toast.error("Post failed to be add");
+    }
   };
 
   return (
