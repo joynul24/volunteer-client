@@ -22,7 +22,7 @@ const VolunteerNeeds = () => {
       </p>
 
       <div className="mt-7 md:mt-20 bg-[#FDF9F3] px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {volunteers.map((volunteer) => (
+        {volunteers.slice(0,6).map((volunteer) => (
           <VolunteerCard
             key={volunteer._id}
             volunteer={volunteer}

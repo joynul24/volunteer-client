@@ -56,7 +56,8 @@ const AuthProvider = (props) => {
         loading,
         signOutUser,
         errorMessage,
-        updateUserProfile
+        updateUserProfile,
+        setLoading
     }
 
     return (
