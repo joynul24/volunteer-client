@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import VolunteerCard from "./VolunteerCard";
+import AuthContext from "../context/Authcontext";
 
 const VolunteerNeeds = () => {
   const [volunteers, setVolunteers] = useState([]);
+  const {setLoading} = useContext(AuthContext)
 
   useEffect(() => {
+    setLoading(true)
     fetch(`${import.meta.env.VITE_API_URL}/volunteers`)
-      .then((res) => res.json())
-      .then((data) => setVolunteers(data));
-  }, []);
+    .then((res) => res.json())
+    .then((data) => setVolunteers(data));
+  }, [setLoading]);
 
   return (
     <div className="mt-5 md:mt-10">

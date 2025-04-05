@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../context/Authcontext";
 import { toast } from "react-toastify";
 
 const Register = () => {
   const { createUser, setUser, loginUserWithGoogle, updateUserProfile } =
     useContext(AuthContext);
+    const navigate = useNavigate()
 
   const handleRegister =  (e) => {
     e.preventDefault();
@@ -28,8 +29,8 @@ const Register = () => {
       }
     })
     .then(() => {
-      // e.target.reset();
-      // navigate("/");
+      e.target.reset();
+      navigate("/");
     })
     .catch((error) => {
       console.log(error.message);
@@ -42,7 +43,7 @@ const Register = () => {
     loginUserWithGoogle()
       .then((result) => {
         console.log(result.user);
-        // navigate("/");
+        navigate("/");
         if (result.user) {
           toast.success("User register Successfuly");
           return;

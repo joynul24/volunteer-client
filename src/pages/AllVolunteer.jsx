@@ -6,7 +6,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 const AllVolunteer = () => {
   const [volunteers, setVolunteers] = useState([]);
-//   const { user } = useContext(AuthContext);
+  //   const { user } = useContext(AuthContext);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/volunteers`)
@@ -16,9 +16,15 @@ const AllVolunteer = () => {
 
   return (
     <div>
+      <h1 className="mt-10 text-center font-semibold md:font-bold font-m md:text-2xl lg:text-3xl mb-3"> Meet Our Amazing Volunteers</h1>
+      <p className="text-gray-600 font-l w-full md:w-xl text-center mx-auto px-2 md:px-0">
+        They selflessly dedicate their time and effort to drive our mission
+        forward. With every helping hand, we build a more compassionate world.
+        Let’s take a moment to appreciate these incredible individuals.
+      </p>
       <div className="mt-7 md:mt-20 bg-[#FDF9F3] px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {volunteers.map((volunteer) => (
-          <div className="card bg-base-100 shadow-sm">
+          <div key={volunteer._id} className="card bg-base-100 shadow-sm">
             <figure className="overflow-hidden">
               <img
                 className="transition-transform duration-300 hover:scale-110"
