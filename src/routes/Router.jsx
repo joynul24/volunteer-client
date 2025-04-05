@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AllVolunteer from "../pages/AllVolunteer";
 import AddVolunteer from "../pages/AddVolunteer";
+import PrivateRoute from "../components/shared/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
         },
         {
           path: 'addVolunteer',
-          element: <AddVolunteer></AddVolunteer>
+          element: <PrivateRoute><AddVolunteer></AddVolunteer></PrivateRoute>
         }
       ]
     }
