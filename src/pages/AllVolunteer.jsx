@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import AuthContext from "../context/Authcontext";
-import VolunteerCard from "../components/VolunteerCard";
 import { BiSolidCategory } from "react-icons/bi";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const AllVolunteer = () => {
   const [volunteers, setVolunteers] = useState([]);
-  //   const { user } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/volunteers`)
@@ -16,7 +16,10 @@ const AllVolunteer = () => {
 
   return (
     <div>
-      <h1 className="mt-10 text-center font-semibold md:font-bold font-m md:text-2xl lg:text-3xl mb-3"> Meet Our Amazing Volunteers</h1>
+      <h1 className="mt-10 text-center font-semibold md:font-bold font-m md:text-2xl lg:text-3xl mb-3">
+        {" "}
+        Meet Our Amazing Volunteers
+      </h1>
       <p className="text-gray-600 font-l w-full md:w-xl text-center mx-auto px-2 md:px-0">
         They selflessly dedicate their time and effort to drive our mission
         forward. With every helping hand, we build a more compassionate world.
@@ -41,9 +44,11 @@ const AllVolunteer = () => {
                 <FaMapMarkerAlt /> {volunteer.deadline}
               </p>
               <div></div>
-              <button className="btn bg-[#F68926] hover:bg-[#f1a359] text-white mt-5">
-                View Details
-              </button>
+              <Link to={user ? `/volunteerDetails/${volunteer._id}` : "/login"}>
+                <button className="btn bg-[#F68926] hover:bg-[#f1a359] text-white mt-5">
+                  View Details
+                </button>
+              </Link>
             </div>
           </div>
         ))}

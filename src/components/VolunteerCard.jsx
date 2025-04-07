@@ -1,9 +1,12 @@
 import { BiSolidCategory } from "react-icons/bi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import AuthContext from "../context/Authcontext";
+import { useContext } from "react";
 
 const VolunteerCard = ({ volunteer }) => {
-  const { thumbnail, postTitle, category, deadline } = volunteer || {};
+  const {_id, thumbnail, postTitle, category, deadline } = volunteer || {};
+  const {user} = useContext(AuthContext)
 
   return (
     <div>
@@ -24,15 +27,17 @@ const VolunteerCard = ({ volunteer }) => {
             <FaMapMarkerAlt /> {deadline}
           </p>
           <div>
-            <Link to='/allVolunteer'>
+            <Link to="/allVolunteer">
               <button className="btn-link mt-2 text-base cursor-pointer text-yellow-600 font-l">
                 See All Volunteer
               </button>
             </Link>
           </div>
-          <button className="btn bg-[#F68926] hover:bg-[#f1a359] text-white mt-5">
-            View Details
-          </button>
+          <Link to={user ? `/volunteerDetails/${_id}` : "/login"}>
+            <button className="btn bg-[#F68926] hover:bg-[#f1a359] text-white mt-5">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
