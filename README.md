@@ -1,21 +1,40 @@
-# React template
+# Project Name: Volunteer Hub
+# Live URL: volunteer-hub-76b8d.web.app
 
-As React 19 is new, this scaffolding project is for everyone who wants to start coding in React 19.
+A central platform connecting volunteers with organizations in need of support. Built to encourage community engagement, simplify volunteering, and make social impact accessible to all.
 
-It has:
+## 🌟 Features
 
-- Vite
-- React 19.0(Stable Version)
-- React Router
+- 📝 Easy Volunteer Registration & Login
+- 📅 Event Listings & Management
+- 📍  Location-Based Volunteer Opportunities
+- 💬 Messaging System Between Volunteers and Organizations
+- 📊 Dashboard for Volunteers and NGOs
+- 📢 Announcements and News Updates
+- 🏆 Badges & Achievements for Active Volunteers
+
+## 🔧 Technologies Used
+
+- Frontend: HTML, CSS, JavaScript, React.js
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Authentication: JWT,
+- Deployment: Vercel / Netlify (Frontend),(Backend)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js
+- npm 
 - Firebase
-- Sweetalert2
-- TailwindCSS 4.x
-- daisyUi 5
-
-## Create Your Own React 19 Project with Vite and TailwindCSS
-
-There are multiple ways you can utilize this repository to create your own project. The most straightforward way is by using the follwoing command from the command prompt/terminal:
-
-```bash
-npx degit rubel04/React-template-with-tailwind-daisyui-react-router-vite#main <YOUR_PROJECT_NAME>
-```
+- MongoDB
+- Express
+- Cors
+- Dotenv
+- React Icons
+- Toastify
+- SweetAlart2
+- Axios
