@@ -1,5 +1,5 @@
 # Project Name: Volunteer Hub
-# Live URL: volunteer-hub-76b8d.web.app
+Live URL: volunteer-hub-76b8d.web.app
 
 A central platform connecting volunteers with organizations in need of support. Built to encourage community engagement, simplify volunteering, and make social impact accessible to all.
 
@@ -38,3 +38,4 @@ Make sure you have the following installed:
 - Toastify
 - SweetAlart2
 - Axios
+- Lottie React
