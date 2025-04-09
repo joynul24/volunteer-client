@@ -3,7 +3,7 @@ import FAQ from "../assets/FAQ.json";
 
 const Accordion = () => {
   return (
-    <div className="mt-10 md:mt-20">
+    <div className="mt-10 md:mt-32">
       <h1 className="text-center font-semibold md:font-bold font-m md:text-2xl lg:text-3xl mb-3">
         Why Volunteer With Us?
       </h1>

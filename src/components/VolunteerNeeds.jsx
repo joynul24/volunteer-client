@@ -12,7 +12,7 @@ const VolunteerNeeds = () => {
   }, []);
 
   return (
-    <div className="mt-5 md:mt-10">
+    <div className="mt-5 md:mt-32">
       <h1 className="text-center font-semibold md:font-bold font-m md:text-2xl lg:text-3xl mb-3">
         Volunteer Needs Now
       </h1>
