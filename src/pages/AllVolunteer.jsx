@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import AuthContext from "../context/Authcontext";
 import { BiSolidCategory } from "react-icons/bi";
-import { FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { MdOutlineDateRange } from "react-icons/md";
 
 const AllVolunteer = () => {
   const [volunteers, setVolunteers] = useState([]);
@@ -41,7 +41,7 @@ const AllVolunteer = () => {
                 <BiSolidCategory /> {volunteer.category}
               </p>
               <p className="mt-2 flex items-center gap-1 font-l text-gray-600">
-                <FaMapMarkerAlt /> {volunteer.deadline}
+              <MdOutlineDateRange /> {volunteer.deadline}
               </p>
               <div></div>
               <Link to={user ? `/volunteerDetails/${volunteer._id}` : "/login"}>

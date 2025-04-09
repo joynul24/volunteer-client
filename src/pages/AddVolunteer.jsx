@@ -9,7 +9,7 @@ const AddVolunteer = () => {
   const hangleAddVolunteer = async (e) => {
     e.preventDefault();
     const form = e.target;
-    const PostTitle = form.title.value;
+    const postTitle = form.postTitle.value;
     const category = form.category.value;
     const location = form.location.value;
     const deadline = form.deadline.value;
@@ -18,7 +18,7 @@ const AddVolunteer = () => {
     const description = form.description.value;
     const email = form.email.value;
     const newVolunteer = {
-      PostTitle,
+      postTitle,
       category,
       location,
       organizer: {
@@ -32,7 +32,7 @@ const AddVolunteer = () => {
     };
 
     if (
-      PostTitle === "" ||
+      postTitle === "" ||
       category === "" ||
       location === "" ||
       deadline === "" ||
@@ -81,7 +81,7 @@ const AddVolunteer = () => {
               <span className="label-text f-oswald">Post Title</span>
             </label>
             <input
-              name="title"
+              name="postTitle"
               type="text"
               placeholder="title"
               className="input input-bordered w-full"

@@ -1,11 +1,12 @@
 import { BiSolidCategory } from "react-icons/bi";
-import { FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AuthContext from "../context/Authcontext";
 import { useContext } from "react";
+import { MdOutlineDateRange } from "react-icons/md";
 
 const VolunteerCard = ({ volunteer }) => {
-  const {_id, thumbnail, postTitle, category, deadline } = volunteer || {};
+  const {_id, thumbnail,postTitle
+,category, deadline } = volunteer || {};
   const {user} = useContext(AuthContext)
 
   return (
@@ -24,7 +25,7 @@ const VolunteerCard = ({ volunteer }) => {
             <BiSolidCategory /> {category}
           </p>
           <p className="mt-2 flex items-center gap-1 font-l text-gray-600">
-            <FaMapMarkerAlt /> {deadline}
+          <MdOutlineDateRange /> {deadline}
           </p>
           <div>
             <Link to="/allVolunteer">
