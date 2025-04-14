@@ -3,10 +3,11 @@ import AuthContext from "../context/Authcontext";
 import { BiSolidCategory } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { MdOutlineDateRange } from "react-icons/md";
+import { Helmet } from "react-helmet-async";
 
 const AllVolunteer = () => {
   const [volunteers, setVolunteers] = useState([]);
-    const { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/volunteers`)
@@ -16,6 +17,9 @@ const AllVolunteer = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Volunteer Hub | All Volunteer</title>
+      </Helmet>
       <h1 className="mt-10 text-center font-semibold md:font-bold font-m md:text-2xl lg:text-3xl mb-3">
         {" "}
         Meet Our Amazing Volunteers
@@ -41,7 +45,7 @@ const AllVolunteer = () => {
                 <BiSolidCategory /> {volunteer.category}
               </p>
               <p className="mt-2 flex items-center gap-1 font-l text-gray-600">
-              <MdOutlineDateRange /> {volunteer.deadline}
+                <MdOutlineDateRange /> {volunteer.deadline}
               </p>
               <div></div>
               <Link to={user ? `/volunteerDetails/${volunteer._id}` : "/login"}>
